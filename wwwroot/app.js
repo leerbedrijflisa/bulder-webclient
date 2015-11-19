@@ -5,7 +5,8 @@
             {route: "channels/create", moduleId: "channels/create" },
             {route: "channels/overview", moduleId: "channels/overview" },
             { route: "messages/create", moduleId: "messages/create" },
-            { route: "messages/overview", moduleId: "messages/overview"}
+            { route: "messages/overview", moduleId: "messages/overview"},
+            { route: "login", moduleId: "security/login", name: "login" }
         ])
     }
 }   

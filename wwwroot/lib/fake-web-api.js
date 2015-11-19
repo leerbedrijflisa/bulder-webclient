@@ -1,18 +1,31 @@
 export class FakeWebApi {
 
-    getChannels() {
-        return new Promise (function(resolve, reject) {
-            resolve({ content :[
+    constructor() {
+        this.channels = [
             { partitionKey: "Kanaal #1", administrators: "Max Verboom" }
-            ]});
+        ];
+        this.messages = [
+            { author: "Max Verboom", text: "Dit is een test-bericht."}
+        ];
+        this.users = [];
+    }
+
+    authenticate(user) {
+        console.log(user);
+        console.log(this.users);
+    }
+
+    getChannels() {
+        var _this = this;
+        return new Promise (function(resolve, reject) {
+            resolve({ content :_this.channels});
         });
     }
 
     getMessages() {
+        var _this = this;
         return new Promise (function(resolve, reject) {
-            resolve({ content :[
-            { author: "Max Verboom", text: "Dit is een test-bericht."}
-            ]});
+            resolve({ content :_this.messages});
         });
     }
 

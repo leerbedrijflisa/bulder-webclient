@@ -1,0 +1,14 @@
+<template>
+    <form>
+        <div>
+            <label>Your email:</label>
+            <input type="email" value.bind="email" required="required">
+        </div>
+        <div>
+            <label>Your password:</label>
+            <input type="password" value.bind="password" required="required">
+        </div>
+
+        <button click.trigger="submit()">Login</button>
+    </form>
+</template>
