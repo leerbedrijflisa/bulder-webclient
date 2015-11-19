@@ -11,8 +11,7 @@ export class FakeWebApi {
     }
 
     authenticate(user) {
-        console.log(user);
-        console.log(this.users);
+
     }
 
     getChannels() {

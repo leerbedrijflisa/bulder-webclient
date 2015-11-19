@@ -16,7 +16,7 @@ export class Create extends Services {
         };
 
         //RuleFor(x => x.Message).NotEmpty().NotNull().WithMessage("Required field");
-        
+
         this.webApi.addMessage(message);
         window.location.href = "#/messages/overview/#";
     }

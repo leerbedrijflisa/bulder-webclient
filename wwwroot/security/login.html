@@ -1,14 +1,14 @@
 <template>
-    <form>
+    <form role="form" submit.delegate="submit()" validate.bind="validation">
         <div>
-            <label>Your email:</label>
-            <input type="email" value.bind="email" required="required">
+            <label><strong>E-mail ${validationResult.properties.email.message}</strong></label><br>
+            <input type="email" value.bind="email">
         </div>
         <div>
-            <label>Your password:</label>
-            <input type="password" value.bind="password" required="required">
+            <label><strong>Password ${validationResult.properties.password.message}</strong></label><br>
+            <input type="password" value.bind="password">
         </div>
 
-        <button click.trigger="submit()">Login</button>
+        <button type="submit">Login</button>
     </form>
 </template>

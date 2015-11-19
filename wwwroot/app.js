@@ -9,4 +9,4 @@
             { route: "login", moduleId: "security/login", name: "login" }
         ])
     }
-}   
+}
